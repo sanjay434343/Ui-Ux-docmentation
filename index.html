@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice Reels App – UI/UX Documentation</title>
+
+  <style>
+    :root {
+      --bg: #0f0f14;
+      --card: #17171f;
+      --text: #e6e6eb;
+      --muted: #9a9aa5;
+      --accent: #7c7cff;
+      --border: #262630;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 48px 24px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 12px;
+      color: var(--muted);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 32px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: var(--text);
+      margin: 8px 0;
+    }
+
+    ul {
+      margin: 12px 0 12px 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-top: 16px;
+    }
+
+    .note {
+      font-style: italic;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding-left: 12px;
+      margin-top: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🎧 Voice Reels App</h1>
+  <p>
+    UI & UX Design Documentation — an audio-first, reels-style social experience
+    focused on listening, not interaction.
+  </p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Product Philosophy</h2>
+    <div class="card">
+      <ul>
+        <li>Audio-first experience</li>
+        <li>Gesture-driven navigation</li>
+        <li>Minimal text and controls</li>
+        <li>No pressure to engage</li>
+        <li>UI fades once audio starts</li>
+      </ul>
+      <p class="note">
+        The app should feel like listening, not browsing.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Global Design Principles</h2>
+    <div class="card">
+      <ul>
+        <li>Dark-first UI for audio focus</li>
+        <li>One primary action per screen</li>
+        <li>Soft motion only (200–300ms)</li>
+        <li>No visible metrics by default</li>
+        <li>Abstract visuals (waveforms, gradients)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Screens Overview</h2>
+
+    <div class="card">
+      <h3>1. Splash Screen</h3>
+      <p><strong>Purpose:</strong> Brand introduction</p>
+      <ul>
+        <li>Centered logo</li>
+        <li>Animated waveform or gradient pulse</li>
+        <li>No text or loader</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>2. Authentication</h3>
+      <p><strong>Purpose:</strong> Enter with minimal friction</p>
+      <ul>
+        <li>Single “Continue” button</li>
+        <li>No forms or username selection</li>
+        <li>Optional micro-text: “No posts. Just voices.”</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>3. Home (Voice Reels)</h3>
+      <p><strong>Purpose:</strong> Primary listening experience</p>
+      <ul>
+        <li>Full-screen vertical feed</li>
+        <li>One voice per screen</li>
+        <li>Swipe to move, tap to pause</li>
+        <li>UI fades during playback</li>
+      </ul>
+      <p class="note">
+        No usernames or counts visible by default.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>4. Record Voice</h3>
+      <p><strong>Purpose:</strong> Quick voice posting</p>
+      <ul>
+        <li>Hold-to-record interaction</li>
+        <li>15 seconds maximum</li>
+        <li>Auto-stop and auto-upload</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>5. Upload States</h3>
+      <ul>
+        <li>Uploading: “Uploading your voice…”</li>
+        <li>Success: “Your voice is live.”</li>
+        <li>No buttons or next steps</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>6. Profile</h3>
+      <ul>
+        <li>Abstract avatar</li>
+        <li>Username</li>
+        <li>Voices, Followers, Following</li>
+        <li>Saved voices section</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>7. Settings</h3>
+      <ul>
+        <li>Account</li>
+        <li>Notifications</li>
+        <li>Privacy</li>
+        <li>Logout</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Motion & Visual Style</h2>
+    <div class="card">
+      <ul>
+        <li>Ease-in-out transitions</li>
+        <li>Waveform synced to audio amplitude</li>
+        <li>No bounce or elastic animations</li>
+        <li>Accent color only for wave & record button</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>UX Golden Rule</h2>
+    <div class="card">
+      <p class="note">
+        The interface should disappear once the voice starts playing.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Voice Reels App • UI & UX Documentation
+</footer>
+
+</body>
+</html>
